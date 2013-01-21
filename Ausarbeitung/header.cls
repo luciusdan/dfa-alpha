@@ -2,18 +2,19 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{header}
 \LoadClass[11pt,a4paper,twoside,draft]{article}
-\usepackage[utf8x]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[ngerman]{babel}
-\usepackage{graphicx}
+\usepackage{ae}
+\usepackage[pdftex]{graphicx}
 \usepackage{moreverb}
 \usepackage{fancyhdr}
 \usepackage{amsmath,amssymb}
-\usepackage{listings}
 \usepackage{color}
 \usepackage{ifthen}
 \usepackage{setspace}
 \usepackage[hyphens]{url}
+
 % -Zettelspezifeische packages--------------------------------------------
 
 \setlength{\headheight}{14pt}
