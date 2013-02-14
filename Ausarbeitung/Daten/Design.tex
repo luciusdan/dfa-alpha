@@ -88,19 +88,43 @@ Um einen guten Überblick über diese Suchmaschine zu bekommen, kann man nur emp
 
 \subsubsection{Ein reines Bild Design}
 
-Ein weiterer Ansatz ist es, den Analphabeten ein Interface zu liefern, in dem diese nur über Bilder gezeigt bekommen, worum es geht. Dies ist sicherlich für die Entwicklung eine große Herausforderung, da nicht jeder Mensch Bilder auf die gleiche Weise interpretiert, daher muss darauf geachtet werden, dass die Bilder absolut eindeutig in einem entsprechenden Kontext zugeordnet werden können.\\
-Hierbei handelt es sich um eine Anwendung, allen Arten von Analphabeten dabei helfen soll, einen neuen Job zu finden. Diese spezielle Anwendung wurde in Indien entwickelt und speziell für die Menschen dort programmiert. Der Grund und die Inspiration für diese Software war, dass es dort viele Menschen gibt, die wenn sie einen Job haben, diesen nicht mehr aufgeben, auch wenn der Lohn, den sie dafür erhalten viel zu niedrig ist und sie die Chance hätten, einen besseren Job zu bekommen.\\
-Das Problem dieser Leute hier, ist was man natürlich an dieser Stelle nicht vergessen darf, dass sie nicht lesen können und entsprechend, nicht über Jobangebote informiert werden. zudem geht es hierbei auch noch um Menschen, die in den Slums wohnen und dadurch besonders wenig Anschluss an die restliche Gesellschaft haben. Daher wollte man diese Software entwickeln um genau diesen Menschen zu helfen, ihre Lebensqualität ein wenig zu verbessern.\\
+Ein weiterer Ansatz ist es, den Analphabeten ein Interface zu liefern, in dem diese nur über Bilder gezeigt bekommen, worum es geht. Dies ist sicherlich für die Entwicklung eine große Herausforderung, da nicht jeder Mensch Bilder auf die gleiche Weise interpretiert, daher muss darauf geachtet werden, dass die Bilder absolut eindeutig in einem entsprechenden Kontext zugeordnet werden können. Ein Beispiel sind die Bilder für die Tätigkeiten aus der nachfolgenden Anwendung. Hier mussten Details wie fließendes Wasser oder Feuer hinzugefügt werden um zuverdeutlichen, dass es sich um spülen und kochen handelt.
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=1.00\textwidth]{Daten/pic_fail2.PNG}
+	\caption{Deutlichkeit der Illustrationen}
+	\label{fig:picfail}
+\end{figure}
+
+Bei diesem Design handelt es sich um eine Anwendung, welche allen Arten von Analphabeten dabei helfen soll, einen neuen Job zu finden. Diese spezielle Anwendung wurde in Indien entwickelt und speziell für Menschen aus Slums programmiert. Der Grund und die Inspiration für diese Software war, dass es dort viele Menschen gibt, die wenn sie einen Job haben, diesen nicht mehr aufgeben, auch wenn der Lohn, den sie dafür erhalten viel zu niedrig ist und sie die Chance hätten, einen besseren Job zu bekommen.\\
+Das Problem dieser Leute hier, ist was man natürlich an dieser Stelle nicht vergessen darf, dass sie nicht lesen können und entsprechend, nicht über Jobangebote informiert werden. zudem geht es hierbei auch noch um Menschen, die in den Slums wohnen und dadurch besonders wenig Anschluss an die restliche Gesellschaft und keinerlei Erfahrung mit dem Umgang mit digitaler Technik haben. Daher wollte man diese Software entwickeln um genau diesen Menschen zu helfen, ihre Lebensqualität ein wenig zu verbessern.\\
 Um schon mal einen direkten Eindruck von der Applikation zu bekommen, betrachte man bitte Abb.\ref{fig:joblist}.
 
 
 \begin{figure}[h]
 	\centering
-		\includegraphics{Daten/job_list.PNG}
+		\includegraphics[width=0.90\textwidth]{Daten/job_list.PNG}
 	\caption{Job Liste basierend auf Bildern}
 	\label{fig:joblist}
 \end{figure}
 
-Wie man sieht, besteht die Anwendung wie versprochen nur aus Bildern. Was wir hier sehen, ist eine Liste von Jobs, wobei die Bilder die Beschreibung zu dem liefern, was getan werden soll, wie Fegen oder Kochen. Rechts sind noch eine Uhr abgebildet, die den Menschen sagt, wann sie beginnen müssen zu arbeiten - nähere Informationen, wie wie lange sie arbeiten müssen, erhalten sie, wenn sie diese Job anklicken und damit zu den ausführlicheren Informationen gelangen - und daneben einen Geldschein mit einer Zahl drauf, der ihnen sagt, wie viel sie dort verdienen können.
- 
+Man sieht, die Anwendung besteht wie versprochen nur aus Bildern. Was wir hier sehen, ist eine Liste von Jobs, wobei die Bilder die Beschreibung zu dem liefern, was getan werden soll, wie Fegen oder Kochen. Rechts sind noch eine Uhr abgebildet, die den Menschen sagt, wann sie beginnen müssen zu arbeiten - nähere Informationen, wie wie lange sie arbeiten müssen, erhalten sie, wenn sie diese Job anklicken und damit zu den ausführlicheren Informationen gelangen - und daneben einen Geldschein mit einer Zahl drauf, der ihnen sagt, wie viel sie dort verdienen können.\\\\
+In der Abb. \ref{fig:jobclose} werden nun alle Informationen detailierter gestaltet. Die Uhrzeiten werden in der allerseits bekannten analogen Form dargestellt. Vormittags und Nachmittags wird über eine Sonne, bzw. Mond verdeutlicht. Falls die Zahlen doch nicht gelesen werden können, findet sich hier rechts die korrekte Anzahl der Geldscheine.\\\\
 
+Eine weiteres auf Bildern Basierendes Design ist in Abb. \ref{fig:mapsimple} zu sehen.
+Hier wollte man der selben Zielgruppe helfen sich leichter zurecht zufinden. Da normale Karten für Analphabeten, Aufgrund dem Focus auf Straßenanmen nicht lesbar sind. Statt Straßennamen werden hier nun Merkmale zur orientierung genutzt. So sind vorallem Krankenhäuser und andere Auffällige Gebäude angegeben.
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=0.8\textwidth]{Daten/job_close.PNG}
+	\caption{Job Ansicht}
+	\label{fig:jobclose}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=0.8\textwidth]{Daten/map_simple.PNG}
+	\caption{Job Liste basierend auf Bildern}
+	\label{fig:mapsimple}
+\end{figure}
+\clearpage
