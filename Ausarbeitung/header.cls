@@ -101,15 +101,20 @@
 \textbf{eingereicht am:} & & #6\\
 & & \\
 & & \\
-\textbf{Betreuer:} & & #7 
+\textbf{Dozent/in:} & & #7 
 \end{tabular}
 \end{flushleft}
 \newpage
 }
 
-\newcommand{\makeSource}[4]{
+\newcommand{\makeSource}[5]{
 			#1 \\
 			\textbf{\textit{ #2 }}\\
 			#3\\
-			\url{ #4 }
+			#4\\
+			\url{ #5 }
+}
+
+\newcommand{\footnoteSource}[4]{
+			\footnote{#1: \textbf{\textit{ #2 }} - Aufgerufen: \textit{\textbf{#3}}\\ \url{ #4 }}
 }
