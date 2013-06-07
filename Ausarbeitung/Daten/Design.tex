@@ -1,130 +1,189 @@
-\section{Design für Analphabeten}
+\section{Design f"ur Analphabeten}
+Da das Standart Design von Anwendungen meist mit Texten arbeitet und vom verstehen dieser Texte abh"angig ist, k"onnen Analphabeten  schwer oder auch gar nicht diese Anwendungen verwenden. Außerdem haben Analphabeten durch ihre Leseschw"ache eine besondere Herangehensweise zum Lernen und Wahrnehmen angelernt.\\
+Um die Anwendung nun Analphabeten gerecht zu gestalten gibt es zwei grundlegende M"oglichkeiten.
+Die Anwendungen für nicht lesende Benutzer verzichten vollst"andig auf Texte und ersetzten diese durch  andere Medien. Bei Anwendungen für funktionale Analphabeten werden weiterhin Texte verwendet, welche durch andere Medien unterstütz werden k"onnen und stark vereinfacht werden.
 
-Beim Design für Analphabeten gibt es einige Ansätze, wie man Dinge wie bspw. Software gestalten kann, damit auch Menschen, die nicht lesen und schreiben können, diese Dinge verwenden können.\\
-Hierbei ist es wichtig herauszufinden, wie diese Menschen Dinge wahrnehmen, auffassen und wie ihre Herangehensweise beim Erlernen neuer Dinge ist. Für diese Zwecke eignen sich bspw. bereits durchgeführte Studien sehr gut. Solche Studien werden in erster Linie allerdings in Indien und den Phillipinen durchgeführt, wo man sich nur mit primärem Analphabetismus beschäftigt, welcher global gesehen der verbreitetste ist. Aber obwohl für Deutschland die funktionalen Analphabeten interessanter sind, als die Primären, lassen sich die Informationen aus diesen Studien ebenso für die funktionalen Analphabeten verwenden, da immerhin in beiden Fällen das Lesen und Schreiben nicht erlernt ist.\\
-Hierfür ist nun der erste Schritt, sich klar zu machen, dass die abstrakte Kommunikationsschnittstelle Text nicht verwendet werden kann. Entsprechend muss das Interface für Analphabeten anders gestaltet werden. Daher wollen wir anfangs beschreiben, welche Punkte berücksichtigt werden müssen, wenn ein Design für Analphabeten bedacht werden soll, welche Folgerungen sich daraus ergeben und werden anschließend einige Beispiele und praktische Umsetzungen vorstellen.
+\subsection{Designentwicklung}\label{sec:designEval}
+Um die Benutzerfreundlichkeit für Analphabeten zu überprüfen mussten neben den üblichen "Uberprüfungen, ebenfalls Analphabeten als Testgruppen herangezogen werden. Die Testgruppen zum Analphabetismus sind jedoch Aufgrund ihrer Verschwiegenheit schwer zu finden. So empfiehlt sich mit  Hilfsorganisationen wie \glqq alphabund \grqq zusammenarbeiten. Hier bekommt man oft auch Zugang zu bereits get"atigten Studien. Dabei stammen die Studien zu funktionalen Analphabeten vorwiegend aus den Industriestaaten und die Studien zu vollst"andigen Analphabetismus eher aus Entwicklungsl"andern wie Indien und den Philippinen,  wie in der Studie aus 4.3.3. Dabei sind bei solchen Testgruppen oft auch andere kulturelle Faktoren zu beachten wie im Vortrag \glqq Design und Kultur \grqq.  \footnoteSource{\label{W.M.Gribbons01}William M. Gribbons}
+					{Universal Accesibility and Low-Literacy Populations, Implications for Human-Computer, Interactions Desing and Research Methods}
+					{2012}
+					{The Human-Computer Interaction Handbook: Fundamentals, Evolving Technologies and Emerging Applications}
+\footnoteSource{\label{MedhiSaraToyama01}Indrani Medhi, Aman Sagar, and Kentaro Toyama}
+					{Text-Free User Interfaces for Illiterate and Semi Literate Users}
+					{2006}{}
+Bei dem Ausführen der Studien sind vor allem die Eigenschaften der Analphabeten zu beachten.
+Denn bei den üblichen Studien werden viele Schriftstücke wie Frageb"ogen und Aufgabelisten verwendet.
+Diese sind für Analphabeten jedoch nicht verwendbar. Stattdessen kann man entweder diese Schriftstücke mit anderen Medien wie Illustrationen oder Aufnahmen ersetzen oder man begleitet die Probanten pers"onlich bei jedem Schritt. Letzteres ist jedoch sehr Zeit aufwendig. Da Analphabeten geübt sind Auswendig zulernen, seien es W"orter oder T"atigkeiten, müssen die Probanten h"aufiger ausgewechselt werden, damit weiterhin gew"ahrleistet werden kann, dass der Benutzer intuitiv mit der Anwendung umgehen kann.$^{\ref{W.M.Gribbons01}}$\\
 
-\subsection{Designentwicklung}
-Um genau zu bestimmen welche Anforderungen Analphabeten für das Design haben, ist es nötig, dass kontinuierlich mit Probanden zusammen gearbeitet wird, welche die bisherige Arbeit beurteilen können und den Entwicklern zeigen, an welchen Stellen sie das Design noch nicht soweit getroffen haben, dass ihre Schnittstelle einfach zu verstehen ist. Um zusätzlich zu gewährleisten, dass hier ein gutes Ergebnis erreicht wird, müssen die Probanden zu jedem Test wechseln und die neuen Probanden müssen es schaffen, sich alleine und ohne Hilfe mit dem ihnen vorliegenden Objekt klar zu kommen. Nur wenn dies geschafft wird, hat man schließlich ein annehmbares Design, welches auch von Leseschwachen verwendet werden kann.\\
+\subsection{ Designfolgerungen}\label{sec:designClue}
+Wie schon erw"ahnt gibt es zwei grundlegende Varianten zum Design für Analphabeten.
+\begin{itemize}
+\item Das vermeiden von Texten für  prim"are und sekund"are Analphabeten.
+\item Das vereinfachen und unterstützen von Texten für eine breitere Benutzergruppe.
+\end{itemize}
+Die Variante für prim"aren und sekund"aren Analphabetismus unterscheidet sich haupts"achlich im vermeiden von Texten von der zweiten Variante. Darum wird im Folgenden haupts"achlich auf die Variante für funktionale Analphabeten eingegangen.
+Außerdem entspricht die Variante für funktionale Analphabeten eher dem Kurs-Thema \glqq Design for All\grqq .\\\\
 
-Normalerweise wird ein solcher Test mit Dokumente wie Fragebögen oder Aufgabelisten begleitet. 
-Dies ist aber bei Analphabeten einfach nicht möglich.
-Eine Alternative ist die ständige Zusammenarbeit mit dem Probanden, was jedoch zu viel Zeit beansprucht. Eine weitere Alternative ist, die Texte mit Illustrationen oder Audiodateien zu ersetzen, oder für funktionale Analphabeten zu erweitern. Ein wichtiges Problem bei der Evaluierung ist, dass Analphabetisten ihre Schwäche verheimlichen oder ihr nicht bewusst sind. Dieses Verheimlichen führt dazu, dass man nur schwer Probanden findet. Die beste Möglichkeit dabei bietet das Ansprechen von Hilfsorganisationen wie \glqq Alphabund\grqq. Über diese Organisationen kann auch leicht auf bereits getätigte Studien zurückgegriffen werden, oder ggf. Probanden gefunden werden.
+Die folgenden Folgerungen stammen aus \glqq The Human-Computer Interaction Handbook: Fundamentals, Evolving Technologies and Emerging Applications \grqq $^{\ref{W.M.Gribbons01}}$. Dabei werden diese Richtlinien in vier Kategorien eingeteilt:\\
 
-\subsection{ Designfolgerungen }
-Im Grunde sind die Lösungen für Analphabeten nicht anders als bei \glqq normalen\grqq Benutzern, ausgenommen die Änderungen für primäre und sekundäre Analphabeten. Jedoch sind bei Analphabeten gute Umsetzungen um so wichtiger.\\
-Im folgenden werden die Forderungen in vier Kategorien aufgeteilt. 
-Die Anforderungen am Lesen beschreiben alle Änderungen, die das lesen der einzelnen Wörter vereinfachen, beziehungsweise ersetzen soll.\\
-Die Anforderungen an das Merken beschreiben alle Änderungen, welche den Benutzer konzentrierter Arbeiten lassen.\\
-Die Anforderungen an die Metakognition beschreiben die Änderungen, die zum ziehen von Schlüssen hilfreich sind, so zum Beispiel schon das verstehen einzelner Sätze.\\
-Zu letzt die Suche und Navigation, welche die Wege beschreiben die der Benutzer verwenden kann.\\\\
-Dabei basieren die meisten Schlüsse auf den Fähigkeiten eines Funktionalen Analphabeten, diese können zwar auch mit denen der primären und sekundären Analphabeten arbeiten, doch können durch die semi-textbasierte Anwendung leichter andere Zielgruppen angesprochen werden.
+\begin{itemize}
+\item Lesen:              "Anderungen die das Lesen der einzelnen W"orter vereinfachen oder auch ersetzen sollen.
+\item Merken:            "Anderungen die das Merken vereinfachen sollen und somit die Konzentration erh"ohen.
+\item Metakognition: "Anderungen die zum Schlussfolgern und verstehen des Inhalts n"otig sind.
+\item Suche und Navigation : "Anderungen die die Suche in der Anwendung und das Suchen von Informationen erleichtern.
+\end{itemize}
 
-\subsubsection{Lesen}
-Welche Möglichkeiten kommen statt Text in Frage? Die naheliegendste Lösung wäre ein Interface, das die Menschen akustisch anleitet, was zu tun ist, ähnlich wie mit Sehbehinderten. Sowas ist jedoch schwierig, denn Audiodateien benötigen viel Speicherplatz und soll beispielsweise ein Handy gestaltet werden, das auch Analphabeten benutzen können, so wird der Speicherplatz knapp, da ein reines Toninterface zu viele Audiodateien benötigt. Daher sind viele Firmen dazu übergegangen - besonders bei Handys - das Interface mit möglichst wenig Text und mit speziell ausgewählten Bildern zu gestalten, deren Bedeutung leicht zu identifizieren sein soll.\\
-Für funktionale Analphabeten lässt sich eingeschränkt auch weiterhin Text verwenden. Dabei sollte dieser möglichst leicht zu lesen und zu verstehen sein. Außerdem sollte man die Schriftart so einfach und lesbar wie möglich gestalten.\\
-Für die Lesbarkeit des Textes ist es wichtig, dass der Text in einfacher Sprache geschrieben ist. Um das zu verdeutlichen kann man die Sprache in verschiedene Schwierigkeitsstufen teilen.
-So wäre Stufe 1 das niedrigste Niveau und  12 das von Amtsschriftstücken. Nach einer Studie würden etwa die Hälfte aller Amerikaner hier auf Stufe 8 sein. Ein Analphabet liegt in der Regel weit darunter. Verwendet man nun einen Sprachschatz aus der Stufe 8, kommen die Benutzer mit Leseausbildung problemlos zurecht. Verwendet man aber zum Beispiel Text der Stufe 4 kommen auch funktionale Analphabeten und auch Kinder, die das Lesen gerade noch lernen, mit dem Text zurecht.
-
+\subsubsection{Lesen}\label{sec:designClueReading}
 \begin{figure}[h]
 	\centering
 		\includegraphics[width=0.50\textwidth]{Daten/up_goer_five_part.png}
-	\caption{Up Goer Five: Einfache Sprache aber schwierige Schrift}
-	\label{fig:GiveFive}
+	\caption{Up Goer Five: Einfache Sprache aber schwierige Schrift $^{\ref{up_goer_five_01}}$}
+	\label{fig:GoerFive}
 \end{figure}
 
+Für vollst"andige Analphabeten, also Analphabeten die gar nicht lesen k"onnen, muss der Textinhalt vollst"andig durch andere Medien ersetzt werden. Dafür k"onnen akustische Signale verwendet werden. Für diese Akustischen Signale verwendet man entweder Tonaufnahmen oder Screenreader wie bereits im Vortrag zum Thema \glqq Design für Menschen mit Sehsch"adigung \grqq vorgestellt, dieser muss dann aber auch für Analphabeten leicht zug"anglich sein.\\
+Ebenfalls k"onnen Illustrationen verwendet werden, welche über ihren Bildinhalt dieselben Informationen vermitteln.
+Da die Illustrationen aber wesentlich komplexer als Texte sind, müssen sie m"oglichst Aussagekr"aftig und leicht interpretierbar sein. Dabei sind auch wie aus dem Vortrag \glqq Globalisierung, Lokalisierung \grqq die kulturelle Unterschiede wichtig zu beachten.\\
+Für funktionale Analphabeten muss der Text nicht zwingend ersetzt werden, doch ist es wichtig den Text einfacher und verst"andlicher zu gestalten. Damit wird dieser verst"andlicher für Analphabeten und sollte durch die bisher genannten alternativen Medien erg"anzt werden. Um das lesen des Textes zu vereinfachen kann man auch den Inhalt vereinfachen, indem er auf die wichtigen Informationen
+reduziert und gruppiert wird.
+ Auch ist es Hilfreich den Text in einfacher Sprache zu schreiben. Denn je nach verwendeten Wortschatz ist der Text einfacher oder auch schwerer zu verstehen. Ein Beispiel dazu ist in Abbildung \ref{fig:GoerFive} zu finden. Hier erkl"art Randall Munroe mit Hilfe der 1000 bekanntesten englischen W"orter den Aufbau der Saturn V Rakete.
+\footnoteSource*{\label{up_goer_five_01}Jason Major}
+				{This is Awesome: U.S. Space Team’s “Up Goer Five”}
+				{5.6.2013}
+				{http://www.universetoday.com/98411/this-is-awesome-u-s-space-teams-up-goer-five/}
+ Durch die einfache Sprache f"allt es den Leser einfacher den Inhalt zu verstehen. Jedoch wurde hier eine ungünstige Schriftart verwendet, welche für ungeübte Leser schwerer zu lesen ist, denn auch die Schriftart beeinflusst die Schwierigkeit des Textes.
+Um den Inhalt eines Textes zu Kategorisieren führten Croft und Peterson 2002 und Darrell West 2003 Arbeiten durch, in denen sie Schriftstücke verschieden schweren Wortsch"atzen zuordneten.
+Demnach liegen etwa 70\% der Staatlichen Webseiten auf einem Level von 12 und Asthma bezogene Websites auf einem Level von 10.
+Dabei verfügt die H"alfte der amerikanischen Bev"olkerung h"ochstens Level . Ein funktionaler Analphabet liegt noch weit darunter.
+Ein Schriftstück von Level 8 kann somit von allen Amerikanern verstanden werden, ein Schriftstück mit niedrigeren Level jedoch auch von anderen Gruppen bis hin zu den funktionalen Analphabeten.$^{\ref{W.M.Gribbons01}}$\\
+
 \subsubsection{Merken}
-Was hat Merken mit Lesen zutun?\\
-Direkt nicht viel, außer dass einige Analphabeten auf Grund mentaler Behinderungen nicht lesen können. Jedoch fordert das Merken viel Konzerntration. Vergisst man etwas muss man es erneut lesen und da kommen dann die Schwierigkeiten. Um nun das Merken und somit das Lesen zu unterstützen sollten alle Ablenkungen in der Anwendung entfernt werden. 
-Dabei zählt nicht nur blinkende Werbung zu diesen Ablenkungen. Eine der größten Ablenkungen sind andere Aufgaben, die vermieden werden könnten. Denn durch mehrere Aufgaben müssen nicht nur mehr Information gemerkt werden, sondern der Leser muss auch bewerten für was das zu lesende gerade beiträgt. Besonders schwer ist das bei Widersprüchen. Diese zwingen den Benutzer häufig die bereits gelesene Texte erneut zu lesen um den Konflikt zu lösen. Genauso wichtig wie für die üblichen Benutzern sind Informationen besser zu merken und somit auch besser zu verstehen, wenn sie auf die nötigen Informationen reduziert werden. Dazu eignet es sich die Informationen in sich geschlossene Abschnitte einzuteilen.
+Merken hat nur indirekte Auswirkungen auf das Leseverhalten. Einerseits führen einige mentale Behinderungen die sich auf das Merken auswirken zum Analphabetismus wie auch schon im Vortrag \glqq Design für Menschen mit Lernschwierigkeiten \grqq angesprochen wurde. Andererseits kann eine Person nur eine bestimmte Menge an Konzentration aufwenden. Ist Diese bereits für das Merken verbraucht fehlt sie beim Lesen oder man vergisst etwas und muss es erneut Lesen. 
+Die F"ahigkeit zu Merken kann unterstützt werden indem die Informationen aufs wesentliche Reduziert werden oder in sinnvolle Gruppen gegliedert wird. Am wichtigsten ist jedoch, dass unn"otige Ablenkungen m"oglichst vermieden werden.
+Die offensichtlichen Ablenkungen sind blinkende Werbebanner oder Lauftext, aber auch zu viele Nebenaufgaben lenken stark von der Hauptaufgabe ab und sollten m"oglichst reduziert werden. Denn mit vielen Aufgaben muss nicht nur mehr Informationen gemerkt, sondern auch der Informationswert für die einzelnen Aufgaben ermittelt werden. Für den Inhalt selber ist es wichtig, dass Widersprüche m"oglichst vermieden werden. Denn Widersprüche zwingen den Benutzer die Informationen erneut durch zugehen und zu bewerten und zwingen ihn die Kapitel erneut zu lesen.
 
 \subsubsection{Metakognition}
-Die Metakognition ist dem Merken und Lesen sehr ähnlich, da sie hier mit dem kombinieren oder auch verstehen des Gemerkten als Ganzes zu verstehen ist. Dabei wird der Benutzter meist mehr auf sich verlassen als nötig. So kann man die derzeitigen Ziele wie zum Beispiel Anmelden und Thema auswählen Angeben. Am sinnvollsten sollten diese in der Form einer Checkliste immer ersichtlich sein. Auch können Wahlmöglichkeiten zu Problemen führen, da der Benutzer erst einmal die einzelnen Möglichkeiten unterscheiden muss. So kann der Benutzer jeder Zeit schauen, was er gerade machen muss, was er gemacht hat und was noch kommt. Genauso wie so die Aufgaben einheitlich dargestellt werden sollten, sollte auch das restliche Design einheitlich und konsistent sein. Damit kann er die bereits bekannten Schaltflächen schneller verwenden.\\
 \begin{figure}[h]
 	\centering
 		\includegraphics[width=1.00\textwidth]{Daten/ServerBeispiel.png}
-	\caption{Interface mit Checkliste und Wahlmöglichkeiten}
+	\caption{Interface mit Checkliste und Wahlm"oglichkeiten $^{\ref{mc_serv_01}}$}
 	\label{fig:InstallBsp}
 \end{figure}
+Die Metakognition beschreibt das Verarbeiten und Kombinieren der gesammelten Informationen und überschneidet sich in einigen Punkten mit den anderen Kategorien. So ist es wichtig das Design der Anwendung m"oglichst einheitlich und konsistent zuhalten, damit der Benutzer sich nicht immer neu einfinden muss.\\
+Eine wichtige Metakognition ist das Zielsetzen. Hier l"asst sich recht einfach das aktuelle Ziel vorgeben, wie \glqq Anmelden \grqq, \glqq Ausw"ahlen \grqq oder auch \glqq Was ist ... \grqq.  Um den Benutzer eine Übersicht zu bieten welche Aufgaben er bereits abgeschlossen hat oder noch auf ihn zu kommen sind auch Checklisten sinnvoll. Diese Checklisten sollten immer eingeblendet werden, wenn sie sinnvoll sind. Als Beispiel ist hier die Installationssoftware vom Microsoft-Server 2007
+\footnoteSource{\label{ mc_serv_01}Microsoft}
+						{Microsoft-Server 2007 Installation}
+						{Stand : 14.2.2013}
+						{http://i.technet.microsoft.com/dynimg/IC22550.gif} 
+in der Abbildung \ref{fig:InstallBsp}zu sehen. Hier Rot markiert sind die einzelnen Installationsschritte w"ahrend der gesamten Installation einsehbar.\\
+Auch etwas Auszuw"ahlen ist Metakognition. Gerade hier kann der Benutzer leicht überfordert werden, indem er zu wenig oder auch zuviel Informationen erh"alt. Oft führt eine Wahlm"oglichkeit bei Analphabeten dazu, dass sie einfach die erste Wahlm"oglichkeit verwenden. Bei manchen Wahlm"oglichkeiten, wie im Beispiel aus der Abbildung \ref{fig:InstallBsp}mit Blau markiert, kann dafür die erste Auswahlm"oglichkeit mit einer optimalen oder auch vereinfachten Wahl belegt werden.
 
 \subsubsection{Navigation und Suche}
-Übersicht ist für jeden Benutzer sinnvoll. Jedoch ist es schwer die Balance zwischen vielen Wahlmöglichkeiten und der Tiefe der Wahlmöglichkeiten zu finden. Gerade beim unterscheiden der Alternativen sollte klar sein, wo was hinführt. Dabei wird das gerade für Analphabeten schnell unübersichtlich und die Möglichkeiten sollten gering gehalten werden. Jedoch fühlen sich Analphabeten auch schneller verloren und somit sollten die Suchwege nicht zu lang werden. Um diesen Konflikt etwas aufzulösen bietet sich das Anzeigen des Verlaufs an. Ebenso sollten die wichtigsten oder auch häufigsten Inhalte wie Suche, Anmelden und Hilfe möglichst ohne suchen zugänglich sein. Der Analphabetismus stellt gerade für die Suche eine Herausforderung dar, da der Benutzer die Wörter mit denen er sucht meist nicht richtig schreiben kann. Die Suche muss somit die Wörter interpretieren was sie entsprechen könnten.
 \begin{figure}[h]
 	\centering
 		\includegraphics[width=0.80\textwidth]{Daten/rechtschreibung.png}
-	\caption{Fehlerkorrektur der Suche bei Google}
+	\caption{Fehlerkorrektur der Suche bei Google $^{\ref{google01}}$}
 	\label{fig:GoogleSearch}
 \end{figure}
 
+Übersicht ist für jeden Benutzer sinnvoll. Jedoch ist es schwer die Balance zwischen vielen Wahlm"oglichkeiten und der Tiefe der Wahlm"oglichkeiten zu finden. Gerade zum Unterscheiden der M"oglichkeiten sollte klar sein, wohin welche Auswahl führt, damit sich die 
+Suchwege m"oglichst verkürzen. Eine weitere Variante um den Suchweg zu verkürzen ist den Verlauf anzuzeigen, damit der Benutzer zurück verfolgen kann was er bereits bearbeitet hat. Ebenso sollten die wichtigsten oder auch h"aufigsten Inhalte wie Suche, Anmelden und Hilfe m"oglichst ohne suchen zug"anglich sein.\\
+Die Suche stellt für Analphabeten eine besondere Herausforderung dar. Die übliche Suche ben"otigt eine genaue Eingabe des zu suchenden Wortes. Da aber Analphabeten h"aufig die W"orter falsch schreiben kommen sie gew"ohnlich nicht an das gewünschte Ziel. Darum sollte die Suche die Eingabe erst interpretieren und gegebenenfalls Alternativen anbieten.
+Als g"angigstes Beispiel hierfür dient die Suchmaschiene Google$^{\ref{fig:GoogleSearch}}$, welche z.B. als Korrektur für \glqq alfabeht \grqq \glqq alphabet\grqq angibt.
+\footnoteSource{\label{google01}Google Inc.}
+						{Google Suchmaschiene}
+						{Stand : 5.6.2013}
+						{www.google.de}
+
 \subsection{Beispiele: Design für Analphabeten}
+In diesem Kapitel folgen drei Beispiele für Anwendungen die für Analphabeten geeignet sind und die in \ref{designClue} genannten Kriterien verdeutlichen sollen. Dabei würden m"oglichst verschiedene Anwendungen gew"ahlt, um zu zeigen auf welche unterschiedlichen Weisen Anwendungen für Analphabeten funktionieren k"onnen.
 
-Nun wollen wir ein paar Beispiele nennen, in denen man sich mit genau diesem Problem beschäftigt hat und entsprechende Lösung dafür für die Öffentlichkeit bereithält (Abb \ref{fig:DesignBeispiel1}).
+\subsubsection{ integrierte Software: ReadSpeaker}
 
-\subsubsection{Auditives Text-Design}
-
+Dieses Beispiel ist eine integrierte Software, welche beliebigen Text der Website Bundesverband Alphabetisierung
+\footnoteSource{\label{alphaBund01}Bundesverband Alphabetisierung}
+						{Bundesverband Alphabetisierung Website}
+						{Stand : 14.2.2013}
+						{http://www.alphabetisierung.de/}
+vorlesen kann.
+Dabei markiert der Benutzer den zu übersetzenden Text, worauf unten rechts eine Schaltfl"ache \glqq Vorlesen \grqq wie in Abbildung  \ref{fig:DesignBeispiel1} erscheint. Mit dieser kann nun die Wiedergabe gestartet werden, worauf wieder eine weitere Schaltfl"ache erscheint, mit der unter anderem die Wiedergabe gestoppt oder pausiert werden kann.\\
+Somit wird der Umfang der Website für funktionale Analphabeten weit gesteigert und auch andere Analphabeten dürften sp"atestens nach einer kleinen Einweisung den Umfang nutzen k"onnen. Auch ist nur die Maus als Eingabeger"at n"otig. So kann eine Beliebige Seite mit beliebigen Inhalt für den Anbieter leicht den Analphabeten zug"anglich gemacht werden. Dabei kann bis auf in Bildern vorkommender Text, jeder Text ohne Teure Tonaufnahmen übersetzt werden, wie in \ref{sec:designClueReading}. Dabei geht aber die Übersichtlichkeit verloren, da es für den Benutzer dauert den Text zu markieren und anzuh"oren. Außerdem ist der Wortschatz nicht unbedingt für Analphabeten geeignet und durch den Übersetzter schwer zu verstehen.
 \begin{figure}[h]
 	\centering
 		\includegraphics[width=0.80\textwidth]{Daten/DesignBeispiel1.png}
-	\caption{Design Beispiel vom Bundesverband Alphabetisierung}
+	\caption{Design Beispiel vom Bundesverband Alphabetisierung $^{\ref{alphaBund01}}$}
 	\label{fig:DesignBeispiel1}
 \end{figure}
 
-Hier kann man auf Abb.\ref{fig:DesignBeispiel1} einen markierten Text sehen und unten rechts einen kleinen Button, auf dem "`Vorlesen"' steht. Diese Anwendung ist so gedacht, dass sobald User einen Text markieren, diese den Vorschlag eingeblendet bekommen, dass ihnen dieser Text doch einfach vorgelesen werden könnte. Ohne Zweifel ein Design, dass sich in erster Linie bestenfalls für funktionale Analphabeten auszahlt, oder zumindest für Leute, die eine kurze Einführung erhalten. Jedoch ist die Idee, die hinter dem ganzen steckt eine Fantastische, die dem User eine Möglichkeit anbietet schwierigen Text für ihn zu entziffern, wenn er dazu nicht in der Lage ist. Akkustisch fällt schlimmstenfalls noch das Problem ins Gewicht, dass Worte vielleicht unbekannt sein könnten, aber dies wollen wir hier nicht näher behandeln.\\
-Der User kann sich in so wie man es sieht, wirklich jeden Text markieren - ausgenommen natürlich den Text auf Bildern - und ihn sich vorlesen lassen, wodurch er sogar eine Möglichkeit hat, sich die Navigation an der Stirnseite der Seite vorlesen zu lassen. Wenn man also erst einmal weiß, wie man in etwa mit einer Maus umgeht, kann sich jeder User, der dieser Sprache mächtig ist über die ganze Seite navigieren lassen und sich immer anhören, was die Maschine zu sagen hat, wenn er selber es nicht schafft.\\
 \newpage
-\subsubsection{Reines Text-Design}
-
-Es gibt auch andere Varianten, die reinweg für funktionale Analphabeten gedacht sind. In diesem Punkt kommen wir nun zu der Suchmaschine Invisque (INteractive VIsual Search and QUery Environment). Diese Suchmaschine ist in erster Linie nicht nur für Analphabeten entwickelt worden, aber wurde laut Angaben der Entwickler so weiterentwickelt, dass sie auch für funktionale Analphabeten geeignet sein soll. Um dieses Ziel zu erreichen, haben die Entwickler versucht einigen Problemen, die funktionale Analphabeten haben, entgegen zu wirken, wie das es diesen Menschen schwer fällt sich auf den Text zu konzentrieren, wenn sehr viel ablenkender weiterer Text auf der Seite verteilt wird, oder wenn PopUps auftauchen, oder Werbung allgemein an den Rändern blinkt. All dies blendet Invisque erfolgreich aus mit einer Blanko-Oberfläche. Invisque verwendet einen wenig irritierenden weißen Hintergrund, in den Ecken befinden sich kleine Felder, aus denen man sich weitere Informationen und Navigationsunterstützung besorgen kann. wie auf Abb.\ref{fig:Invisque} zu sehen ist.
-
+%-------------------------------------------------------------------------------------------------------------------------
+\subsubsection{Reines Text-Design : Inisque}
+In diesem Beispiel kommen wir zu einer Anwendung, welche nur für funktionale Analphabeten entwickelt wurde: Die Suchmaschine Invisque (INteractive VIsual Search and QUery Environment)
+\footnoteSource{\label{Invisque01}Invisque - INteractive VIsual Search and QUery Environment}
+						{Stand: 5.6.2013}
+						{http://www.invisque.com/index.html}{}
+.\\ Diese Suchmaschine ist in erster Linie nicht nur für Analphabeten entwickelt worden, aber wurde laut Angaben der Entwickler so weiterentwickelt, dass sie auch für funktionale Analphabeten geeignet sein soll. Um dieses Ziel zu erreichen, haben die Entwickler versucht einige Probleme, die funktionale Analphabeten haben, entgegen zu wirken, wie das es diesen Menschen schwer f"allt sich auf den Text zu konzentrieren, wenn sehr viel ablenkender weiterer Text auf der Seite verteilt wird, oder wenn PopUps auftauchen, oder Werbung allgemein an den R"andern blinkt. All dies blendet Invisque erfolgreich aus mit einer Blanko-Oberfl"ache. Invisque verwendet einen wenig irritierenden weißen Hintergrund, in den Ecken befinden sich kleine Felder, aus denen man sich weitere Informationen und Navigationsunterstützung besorgen kann. wie auf Abb.\ref{fig:Invisque} zu sehen ist.
 
 \begin{figure}[h]
 	\centering
 		\includegraphics[width=0.80\textwidth]{Daten/Inisque.PNG}
-	\caption{Invisque Oberfläche}
+	\caption{Invisque Oberfl"ache}
 	\label{fig:Invisque}
 \end{figure}
 
-Um einen guten Überblick über diese Suchmaschine zu bekommen, kann man nur empfehlen, es selber ein wenig auszuprobieren und verschiedene Schlüsselwörter einzugeben, mit denen man sich mit der Suche vertraut macht.
+Um einen guten Überblick über diese Suchmaschine zu bekommen, ist es zu empfehlen sie selbst Auszuprobieren und verschiedene Schlüsselw"orter einzugeben.
 
-\subsubsection{Ein reines Bild Design}
-
-Ein weiterer Ansatz ist es, den Analphabeten ein Interface zu liefern, in dem diese nur über Bilder gezeigt bekommen, worum es geht. Dies ist sicherlich für die Entwicklung eine große Herausforderung, da nicht jeder Mensch Bilder auf die gleiche Weise interpretiert, daher muss darauf geachtet werden, dass die Bilder absolut eindeutig in einem entsprechenden Kontext zugeordnet werden können. Ein Beispiel sind die Bilder für die Tätigkeiten aus der nachfolgenden Anwendung. Hier mussten Details wie fließendes Wasser oder Feuer hinzugefügt werden um zuverdeutlichen, dass es sich um spülen und kochen handelt.
+\newpage
+%-------------------------------------------------------------------------------------------------------------------------
+\subsubsection{textlose Anwendung}
+In diesem Beispiel geht es um zwei Anwendungen welche zur Studie \glqq Text-Free User Interfaces for Illiterate and Semi Literate Users \grqq
+\footnoteSource{\label{MedhiSagarKentaro01}Indrani Medhi, Aman Sagar, and Kentaro Toyama}
+					{Text-Free User Interfaces for Illiterate and Semi Literate Users}
+					{2006}
+					{}
+ von Indrani Medhi, Aman Saga und Kentaro Toyama geschrieben wurden.\\
+Ziel war es Anwendungen zu schreiben, welche einer Indischen Slumbev"olkerung eine erleichterte Jobsuche und eine Wegbeschreibung bieten sollten. Da diese Bewohner oft bei ihrem Job bleiben und ihn nicht mehr so leicht auf geben , auch wenn der Lohn, den sie dafür erhalten viel zu niedrig ist und sie die Chance h"atten, einen besseren Job zu bekommen. Diese Bev"olkerung besteht zum gr"oßten Teil aus prim"aren Analphabeten, dabei mussten die Entwickler nicht nur mit den Analphabeten üblichen Problemen wie in \ref{sec:designEval} k"ampfen, sondern auch viel mit den Kulturellen. Zum Beispiel hatte kaum ein Bewohner bisher Erfahrung mit digitaler Technik.\\
+Besonders wurden die Interpretationen der Bilder hervorgehoben. Bilder die die Entwickler eindeutig fanden, waren für die Bev"olkerung noch lange nicht zu verstehen. So mussten für Abspülen und Kochen extra noch Feuer und Wasser hinzugefügt werden, wie man in Abbildung \ref{fig:picfail} sehen kann. (Zur Veranschaulichung haben wir das Bild um die Illustrationen ohne Feuer und Wasser erweitert.) Hier wurden die linken Darstellungen eher als Geschirr angesehen, statt den gewollten Aktionen Abspülen und Kochen. Somit wurden sie durch die rechten Darstellungen ersetzt.\\\\
 
 \begin{figure}[h]
 	\centering
 		\includegraphics[width=1.00\textwidth]{Daten/pic_fail2.PNG}
-	\caption{Deutlichkeit der Illustrationen}
+	\caption{Deutlichkeit der Illustrationen $^{\ref{MedhiSagarKentaro01}}$}
 	\label{fig:picfail}
 \end{figure}
 
-Bei diesem Design handelt es sich um eine Anwendung, welche allen Arten von Analphabeten dabei helfen soll, einen neuen Job zu finden. Diese spezielle Anwendung wurde in Indien entwickelt und speziell für Menschen aus Slums programmiert. Der Grund und die Inspiration für diese Software war, dass es dort viele Menschen gibt, die wenn sie einen Job haben, diesen nicht mehr aufgeben, auch wenn der Lohn, den sie dafür erhalten viel zu niedrig ist und sie die Chance hätten, einen besseren Job zu bekommen.\\
-Das Problem dieser Leute hier, ist was man natürlich an dieser Stelle nicht vergessen darf, dass sie nicht lesen können und entsprechend, nicht über Jobangebote informiert werden. zudem geht es hierbei auch noch um Menschen, die in den Slums wohnen und dadurch besonders wenig Anschluss an die restliche Gesellschaft und keinerlei Erfahrung mit dem Umgang mit digitaler Technik haben. Daher wollte man diese Software entwickeln um genau diesen Menschen zu helfen, ihre Lebensqualität ein wenig zu verbessern.\\
-Um schon mal einen direkten Eindruck von der Applikation zu bekommen, betrachte man bitte Abb.\ref{fig:joblist}.
-
-
-\begin{figure}[h]
-	\centering
-		\includegraphics[width=0.90\textwidth]{Daten/job_list.PNG}
-	\caption{Job Liste basierend auf Bildern}
-	\label{fig:joblist}
-\end{figure}
-
-Man sieht, die Anwendung besteht wie versprochen nur aus Bildern. Was wir hier sehen, ist eine Liste von Jobs, wobei die Bilder die Beschreibung zu dem liefern, was getan werden soll, wie Fegen oder Kochen. Rechts sind noch eine Uhr abgebildet, die den Menschen sagt, wann sie beginnen müssen zu arbeiten - nähere Informationen, wie wie lange sie arbeiten müssen, erhalten sie, wenn sie diese Job anklicken und damit zu den ausführlicheren Informationen gelangen - und daneben einen Geldschein mit einer Zahl drauf, der ihnen sagt, wie viel sie dort verdienen können.\\\\
-In der Abb. \ref{fig:jobclose} werden nun alle Informationen detailierter gestaltet. Die Uhrzeiten werden in der allerseits bekannten analogen Form dargestellt. Vormittags und Nachmittags wird über eine Sonne, bzw. Mond verdeutlicht. Falls die Zahlen doch nicht gelesen werden können, findet sich hier rechts die korrekte Anzahl der Geldscheine.\\\\
-
-Eine weiteres auf Bildern Basierendes Design ist in Abb. \ref{fig:mapsimple} zu sehen.
-Hier wollte man der selben Zielgruppe helfen sich leichter zurecht zufinden. Da normale Karten für Analphabeten, Aufgrund dem Focus auf Straßenanmen nicht lesbar sind. Statt Straßennamen werden hier nun Merkmale zur orientierung genutzt. So sind vorallem Krankenhäuser und andere Auffällige Gebäude angegeben.
-\begin{figure}[h]
-	\centering
-		\includegraphics[width=0.8\textwidth]{Daten/job_close.PNG}
-	\caption{Job Ansicht}
-	\label{fig:jobclose}
-\end{figure}
+Die erste Anwendung soll den Benutzer eine Karte bieten um zu seinem Zielort zu kommen, wie in Abbildung \ref{fig:mapsimple}.\\
+Übliche Karten arbeiten mit Straßennamen, welche einen Analphabeten jedoch nicht weiterhelfen. Somit soll hier der Benutzer sich an Merkmalen der Straßen wie Gesch"aften ,Krankenh"auser oder Bushaltestellen zurechtfinden.
+Bei der ersten Version dieser Anwendung wurde die Person als Pfeil und die zu gehende Wege in Blau markiert. Jedoch führte das zu Missverst"andnissen mit den Probanten. So wurde der Weg als Fluss und der Pfeil erst gar nicht wahrgenommen. Darum ersetzten die Entwickler die Straßen vollst"andig durch Graut"one und den Markierten Weg durch einen dunkleren grau Ton und verbreiterten den Weg.
+Auch der Pfeil wurde durch eine Figur ersetzt, welche entweder von Vorne, hinten oder der Seite gesehen wurde, je nach Richtung.
 
 \begin{figure}[h]
 	\centering
 		\includegraphics[width=0.8\textwidth]{Daten/map_simple.PNG}
-	\caption{Job Liste basierend auf Bildern}
+	\caption{Job Liste basierend auf Bildern $^{\ref{MedhiSagarKentaro01}}$
 	\label{fig:mapsimple}
 \end{figure}
+Die zweite Anwendung soll dem Benutzer eine Art Job-B"orse bieten und somit einen besseren Anschluss an die restliche Bev"olkerung bieten.\\
+Dabei wird ebenfalls vollst"andig auf geschriebenen Text verzichtet, sodass Analphabeten leicht mit der Anwendung umgehen k"onnen.
+Was allerdings nicht auf den folgenden Abbildungen zu sehen ist, ist die Sprachausgabe die über die Hilfe zu jeder Information m"oglich ist. Klickt man auf die Hilfe wird zur jeweiligen Ansicht die n"otigen Informationen und Verwendungs-M"oglichkeiten erz"ahlt.
+In der ersten Abbildung \ref{fig:joblist} sieht man, dass die Anwendung nur aus Bildern besteht. Zusehen ist eine Liste von Jobs, wie man zu dieser Auswahl gelangt oder wodurch Sie bestimmt wird wurde nicht erw"ahnt.\\
+Das Stadt "ahnliche Symbol links soll zeigen, ob der Arbeitsplatz in der Stadt liegt oder nicht. In der Mitte sind die geforderten Aufgaben zuerkennen. Danach wird die für den Ort übliche Uhr als Zeitangabe mit Mond und Sonne als Zeichen für Vor- und Nachmittags dargestellt. Da in der Studie beobachtet wurde, dass die Probanten keine Probleme mit Zahlen hatten, wird ganz rechts der Lohn als Geldschein mit dem Wert angezeigt.\\
+Die Hilfe ist über das Portrait zu finden, da es den meisten Probanten leicht viel ein Portrait einer beliebigen Person als Hilfe wahrzunehmen. Um nun eine detailiertere Ansicht des Berufs zu erhalten muss der Proband nur auf die passende Reihe klicken und kommt so zu Abbildung \ref{fig:jobclose}.
+Hier sind die Informationen noch einmal genauer aufgeführt. Oben in der Mitte wird die Arbeitszeit nun auch mit Ende, bzw. mit Unterbrechung angegeben. Der Lohn steht nun auch in tats"achlichen Geldscheinen in der rechten Ecke. Auch steht nun bei jeder T"atigkeit dabei, welchem Lohn sie entspricht, damit der Bewerber den Aufwand erkennen kann. Zum Schluss finden sich unten die Angaben in welchen und wie vielen R"aume was zu tun ist.
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=0.90\textwidth]{Daten/job_list.PNG}
+	\caption{Job Liste basierend auf Bildern $^{\ref{MedhiSagarKentaro01}}$
+	\label{fig:joblist}
+\end{figure}
+
+
+\begin{figure}[h]
+	\centering
+		\includegraphics[width=0.8\textwidth]{Daten/job_close.PNG}
+	\caption{Job Ansicht $^{\ref{MedhiSagarKentaro01}}$
+	\label{fig:jobclose}
+\end{figure}
+
 \clearpage
