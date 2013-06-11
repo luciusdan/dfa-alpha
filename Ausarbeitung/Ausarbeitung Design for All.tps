@@ -11,14 +11,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1242
-NormalPos.bottom=527
+NormalPos.right=1007
+NormalPos.bottom=431
 Class=LaTeXView
-Document=Daten\ErfahrungenEinesAnalphabeten.tex
+Document=Ausarbeitung Design for All.tex
 
 [Frame0_View0,0]
 TopLine=0
-Cursor=0
+Cursor=201
 
 [Frame1]
 Flags=0
@@ -29,14 +29,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1242
-NormalPos.bottom=527
+NormalPos.right=1007
+NormalPos.bottom=431
 Class=LaTeXView
-Document=Daten\GruendeFuerAnalphabetismus.tex
+Document=Daten\ErfahrungenEinesAnalphabeten.tex
 
 [Frame1_View0,0]
-TopLine=59
-Cursor=5814
+TopLine=0
+Cursor=0
 
 [Frame2]
 Flags=0
@@ -47,14 +47,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1242
-NormalPos.bottom=527
+NormalPos.right=1007
+NormalPos.bottom=431
 Class=LaTeXView
-Document=Daten\Einleitung.tex
+Document=Daten\GruendeFuerAnalphabetismus.tex
 
 [Frame2_View0,0]
-TopLine=40
-Cursor=4280
+TopLine=76
+Cursor=5814
 
 [Frame3]
 Flags=0
@@ -65,14 +65,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1242
-NormalPos.bottom=527
+NormalPos.right=1007
+NormalPos.bottom=431
 Class=LaTeXView
-Document=Daten\Design.tex
+Document=Daten\Einleitung.tex
 
 [Frame3_View0,0]
-TopLine=137
-Cursor=12338
+TopLine=50
+Cursor=4280
 
 [Frame4]
 Flags=0
@@ -83,14 +83,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1242
-NormalPos.bottom=527
+NormalPos.right=1007
+NormalPos.bottom=431
 Class=LaTeXView
-Document=Ausarbeitung Design for All.tex
+Document=Daten\Design.tex
 
 [Frame4_View0,0]
 TopLine=0
-Cursor=212
+Cursor=0
 
 [Frame5]
 Flags=0
@@ -101,8 +101,8 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1242
-NormalPos.bottom=527
+NormalPos.right=1007
+NormalPos.bottom=431
 Class=LaTeXView
 Document=Quellen.tex
 
